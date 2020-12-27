@@ -12,8 +12,9 @@ jobs:
       - python/install-deps
       - python/save-cache
       - run:
-          name: Run Tests
-          command: ~/.local/bin/pytest
+          name: Install Python Dependencies
+          command: |
+            pip install --user --no-cache-dir -r requirements.txt
 
 workflows:
   main:
